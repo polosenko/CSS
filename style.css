@@ -1,0 +1,92 @@
+@keyframes first {
+    from{
+        transform: perspective(800px) rotateY(90deg);
+    }
+    to{
+        transform: perspective(800px) rotateY(0deg);
+    }
+
+}
+@keyframes second {
+    from{
+        transform: perspective(800px) rotateY(-180deg);
+    }
+    to{
+        transform: perspective(800px) rotateY(0deg);
+    }
+
+}
+@keyframes third {
+    from{
+        transform: perspective(800px) rotateY(-90deg);
+    }
+    to{
+        transform: perspective(800px) rotateY(0deg);
+    }
+
+}
+.container {
+    width: 600px;
+    height: 400px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topLeft {
+    background-color: greenyellow;
+    width: 200px;
+    height: 200px;
+    order: 1;
+    transform-origin: left;
+    animation: first 2s;
+}
+
+.topCenter {
+    background-color: rebeccapurple;
+    width: 200px;
+    height: 200px;
+    order: 2;
+    transform: perspective(800px) rotateY(90deg);
+    transform-origin: left;
+    animation: first 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+}
+.topRight {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    order: 3;
+    transform: perspective(800px) rotateY(-180deg);
+    transform-origin: left;
+    animation: second 2s 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+}
+
+.bottomLeft {
+    background-color: yellowgreen;
+    width: 300px;
+    height: 200px;
+    order: 4;
+    transform: perspective(800px) rotateX(-90deg);
+    transform-origin: left;
+    animation: third 2s 6s;
+    animation-fill-mode: forwards;
+    }
+.bottomRight {
+    background-color: yellowgreen;
+    width: 300px;
+    height: 200px;
+    order: 4;
+    transform: perspective(800px) rotateX(-90deg);
+    transform-origin: right;
+    animation: third 2s 6s;
+    animation-fill-mode: forwards;
+
+}
